@@ -1,0 +1,104 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Define a fonte padrão do corpo */
+    background-color: #f4f4f9; /* Cor de fundo suave */
+    display: flex; /* Usado para centralizar o conteúdo */
+    justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    height: 100vh; /* Define a altura da página para 100% da altura da janela de visualização */
+    margin: 0; /* Remove margens externas do body */
+}
+
+/* Container do formulário */
+.form-container {
+    background-color: #fff; /* Cor de fundo branca para o formulário */
+    padding: 30px; /* Espaçamento interno em torno do conteúdo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Adiciona uma leve sombra ao redor do container */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    width: 100%; /* Largura máxima do container */
+    max-width: 400px; /* Limita a largura máxima a 400px */
+    text-align: center; /* Centraliza o texto no container */
+}
+
+/* Estilos para o título do formulário */
+h2 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para os rótulos (labels) dos inputs */
+label {
+    display: block; /* Faz o label ocupar toda a largura disponível */
+    font-size: 16px; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
+    text-align: left; /* Alinha o texto do label à esquerda */
+}
+
+/* Estilos para os campos de entrada (input e textarea) */
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%; /* Faz os campos de entrada ocuparem toda a largura disponível */
+    padding: 12px; /* Adiciona espaçamento interno ao redor do texto dentro dos campos */
+    margin-bottom: 20px; /* Espaçamento abaixo de cada campo */
+    border: 1px solid #ccc; /* Adiciona uma borda fina e cinza clara ao redor dos campos */
+    border-radius: 4px; /* Bordas levemente arredondadas */
+    font-size: 16px;  /* Define o tamanho da fonte dentro dos campos */
+    outline: none;  /* Remove o contorno padrão quando o campo é focado */
+    background-color: #f9f9f9; /* Cor de fundo suave para os campos */
+    transition: border-color 0.3s ease-in-out; /* Suaviza a mudança de cor da borda ao focar o campo */
+}
+
+/* Quando os campos de entrada estão focados, altera a cor da borda */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #5a67d8;  /* Cor de borda roxa quando o campo está focado */
+}
+
+/* Estilos para o botão de envio */
+button[type="submit"] {
+    background-color: #5a67d8;   /* Cor de fundo roxa do botão */
+    color: white;  /* Cor do texto branca */
+    border: none;   /* Remove a borda padrão do botão */
+    padding: 12px 20px; /* Adiciona espaçamento interno ao botão */
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+    border-radius: 4px;  /* Bordas levemente arredondadas no botão */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+    width: 100%; /* Faz o botão ocupar toda a largura disponível */
+    transition: background-color 0.3s ease-in-out; /* Suaviza a mudança de cor de fundo ao passar o mouse */
+}
+/* Altera a cor de fundo do botão quando o usuário passa o mouse */
+button[type="submit"]:hover {
+    background-color: #434190; /* Cor de fundo um pouco mais escura ao passar o mouse */
+}
+
+/* Estilos para a mensagem de resposta que aparece após o envio do formulário */
+#response {
+    margin-top: 20px; /* Espaçamento acima da mensagem */
+    font-size: 14px; /* Tamanho da fonte da mensagem */
+    color: #28a745;  /* Cor verde para mensagens de sucesso */
+}
+
+/* Estilos para dispositivos móveis (telas menores) */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;  /* Reduz o espaçamento interno para telas pequenas */
+    }
+
+    h2 {
+        font-size: 20px; /* Reduz o tamanho do título em telas menores */
+    }
+
+    button[type="submit"] {
+        padding: 10px 15px;  /* Reduz o espaçamento interno do botão em telas pequenas */
+    }
+}
